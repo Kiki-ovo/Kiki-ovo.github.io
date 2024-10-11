@@ -1,87 +1,36 @@
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #ffebf0;
+*{
     margin: 0;
     padding: 0;
-    text-align: center;
+}
+body{
+    width: 100%;
+    max-width: 1920px;
+    min-width: 1280px;
+    background-color: #FFEBEB
 }
 
-/* 导航栏样式 */
-header nav {
-    background-color: #ffe3ed;
-    padding: 20px;
-}
-
-header nav ul {
+.nav li{
+    padding: 0%;
+    margin: 0%;
+    font-size: 32px;
+    font-family: hel;
+    src: url(fonts/HelveticaNeueLTStd-Md.woff);
+    padding-left: 77px;
+    padding-right: 77px;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    float: right;
+    line-height: 55px; 
+
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+.nav{
+    width: 100%;
+    border: 60px;
 }
-
-header nav ul li a {
-    text-decoration: none;
-    color: #ff6f91;
-    font-size: 18px;
-    font-weight: bold;
+.nav ul{
+    list-style: none;
+    display: flex;
 }
+.title{
 
-header nav ul li a:hover {
-    color: #ff4081;
-}
-
-/* 首页欢迎部分 */
-.intro-section {
-    padding: 50px 20px;
-    background-color: #ffe3ed;
-    color: #ff6f91;
-}
-
-.intro-section h1 {
-    font-size: 36px;
-}
-
-.intro-section p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.button {
-    background-color: #ff6f91;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: #ff4081;
-}
-
-/* 信息部分 */
-.info-section {
-    padding: 40px 20px;
-    color: #ff6f91;
-}
-
-.info-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.info-section p {
-    font-size: 16px;
-}
-
-/* 页脚样式 */
-footer {
-    background-color: #ffebf0;
-    padding: 20px;
-    font-size: 14px;
-    color: #ff6f91;
 }
