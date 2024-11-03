@@ -2,35 +2,435 @@
     margin: 0;
     padding: 0;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img{ max-width: 100%;
+    height: auto;
+    object-fit:cover;
+    position: relative;
+    overflow:hidden;
+    display: block; 
+}
+
+
 body{
-    width: 100%;
-    max-width: 1920px;
-    min-width: 1280px;
-    background-color: #FFEBEB
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF7EB
 }
 
-.nav li{
-    padding: 0%;
-    margin: 0%;
-    font-size: 32px;
-    font-family: hel;
-    src: url(fonts/HelveticaNeueLTStd-Md.woff);
-    padding-left: 77px;
-    padding-right: 77px;
-    list-style: none;
-    float: right;
-    line-height: 55px; 
-
-}
-
-.nav{
-    width: 100%;
-    border: 60px;
-}
-.nav ul{
-    list-style: none;
-    display: flex;
-}
 .title{
+    position:relative;
+    top: -73%;
+    left: 48%;
+    color: rgb(0, 0, 0);
+    font-size: 150px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    align-items: center;  
+    list-style: none;
+    float:none;
+    line-height: 55px; 
+}
 
+@font-face{
+    font-family: Inter;
+    src: url(fonts/fonts/InterDisplay-SemiBold.woff2);
+}
+
+.title span {
+    display: inline-block;
+    font-family: Inter;
+    src: url(fonts/fonts/InterDisplay-SemiBold.woff2);
+    transition: transform 0.3s ease;
+  }
+
+.title span:nth-child() { font-size:150px; transform: rotate(-10deg); 
+} /* W */
+.title span:nth-child(2) { font-size: 100px; transform: rotate(13deg);
+}  /* e */
+.title span:nth-child(3) { font-size: 130px; transform: rotate(-5deg); 
+} /* l */
+.title span:nth-child(4) { font-size: 120px; transform: rotate(12deg);
+} /* c */
+.title span:nth-child(5) { font-size: 97px; transform: rotate(-15deg); 
+}/* o */
+.title span:nth-child(6) { font-size: 130px; transform: rotate(6deg); 
+}  /* m */
+.title span:nth-child(7) { font-size: 110px; transform: rotate(-8deg); 
+} /* e */
+.title span:nth-child(8) { font-size: 120px; transform: rotate(4deg); 
+}  /* ! */
+
+.box-top-left {
+    position:relative;
+    top: 32px;
+    left: 35px;
+    width: 416px;
+    height: 324px;
+    background-color: rgba(255, 255, 255, 0.6); 
+    color: white;
+    border: 1px solid #ccc;
+    opacity: 0.6;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  
+  .box-bottom-right {
+    position:relative;
+    top: 40px;
+    bottom: 71px;
+    left: 800px;
+    right: 35px;
+    width: 503px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.6); 
+    color: white;
+    opacity: 0.6;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-style: ;
+    text-align: center;
+  }
+.sp{
+    position:absolute;
+    width: 100%;
+    height: auto;
+    left: -10px;
+}
+  .box-top-left h4{
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .box-bottom-right h4{
+    color: #000;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .tape1{
+    position:absolute;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    top: -55px;
+    left: 170px;
+    width: 60px;
+    height: 100px;
+    margin: 0;
+    padding: 20px;
+  }
+  .tape2{
+    position:absolute;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    top: -55px;
+    left: 210px;
+    width: 60px;
+    height: 100px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .ins{
+    position: absolute;
+    top: -250px; 
+    left: 40%;
+    right: 20px;
+    transform: translateX(-50%);
+    width: 120%; 
+  }
+
+  .down{
+    position: relative;
+    left: 25%;
+    top: -123px;
+  }
+
+  .line{
+    position: relative;
+    left: 10px;
+  }
+
+  .line food1{
+    position: relative;
+    top: 20px;
+    left: 25px;
+  }
+  .image-container {
+    position: relative;
+    width: 90vw; 
+    height: 100vh; 
+    top: -50px;
+    left: 10px;
+    right: 10px;
+    bottom: 25px;
+    margin: 20px auto;
+    background-image: url(img/line.png); 
+    background-size:cover; 
+  background-repeat: no-repeat;
+  background-position: center; 
+    background-size: cover;
+  }
+
+  .image-button {
+    position: absolute;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .image-button img {
+    width: 334px; 
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease; 
+  }
+ 
+  .image-button:hover img {
+    transform: scale(1.1); 
+  }
+  
+  .image-button:nth-child(1) {
+    top: 250px;
+    left: 50px;
+  }
+  
+  .image-button:nth-child(2) {
+    top: 80px;
+    right: 50px;
+  }
+  
+  .image-button:nth-child(3) {
+    bottom: 460px;
+    left: 50px;
+  }
+
+  .image-button:nth-child(4) {
+    bottom: 330px;
+    left: 470px;
+  }
+
+  .image-button:nth-child(5) {
+    bottom: 10px;
+    left: 860px;
+  }
+
+  .image-button:nth-child(6) {
+    bottom: 150px;
+    left: 470px;
+  }
+
+
+  .bar {
+    top:-20px ;
+    position:static;
+    top: -10px;
+    padding: 0;
+    margin: 0;
+    border-top: #000;
+  }
+  .photo-container {
+    position: relative;
+    width: 100%; 
+    height: auto;
+    margin: 20px auto;
+}
+
+.background-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.memory-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 215, 85, 0.8);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s, background-color 0.3s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+.memory-label {
+    opacity: 0; 
+    transition: opacity 0.3s;
+}
+
+.memory-button:hover .memory-label {
+    opacity: 1; 
+}
+
+.memory-button:hover {
+    width: 200px; 
+    height: 40px; 
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+
+.memory-input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.memory-button:hover .memory-input {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.ti{
+    position: relative;
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    border: 2px dashed #333; 
+    padding: 5px; 
+    margin-left: 20px;
+    left: 180px;
+    display: inline-block; 
+}
+
+.content-container {
+    display: flex; 
+    align-items: flex-start; 
+    margin: 20px;
+}
+
+.recipe{
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    color: #333;
+    line-height: 1.6;
+}
+
+.recipe h4 {
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.recipe p {
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    margin: 10px 0; 
+}
+
+.recipe ol {
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    padding-left: 10px; 
+    margin: 10px 0;
+}
+
+.recipe ol li {
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    margin-bottom: 10px;
+}
+
+.recipe ul {
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.recipe ul li {
+    font-family: Kadwa;
+    src: url(fonts/fonts/Kadwa-Regular.woff);
+    margin-bottom: 10px;
+    list-style-type: disc; 
+}
+.nood{
+    width: 1300px;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 20px; 
+    margin-left: 20px;
+}
+
+.share-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.share-button {
+    background-color: #FFEFD7; 
+    color: #966824; 
+    width: 149px;
+    height: 55px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: Inter;
+    src: url(fonts/fonts/Inter-Bold.woff2);
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.share-button:hover {
+    background-color: #debb86; 
+    transform: scale(1.05); 
+}
+
+.share-button:active {
+    transform: scale(0.95); 
+}
+
+.footer{
+    position:relative;
+    top: 20px;
 }
